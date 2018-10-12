@@ -7,7 +7,34 @@
   <groupId>com.github.wglanzer.nbm</groupId>
   <artifactId>nb-plugin-blueprint</artifactId>
   <version>1.0.0</version>
+  <packaging>nbm</packaging>
 
 
+  <build>
+    <plugins>
+      <!-- Generate .nbm-Files -->
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>nbm-maven-plugin</artifactId>
+        <version>4.1</version>
+        <extensions>true</extensions>
+        <configuration>
+          <sourceManifestFile>${project.basedir}/src/nbm/MANIFEST.mf</sourceManifestFile>
+        </configuration>
+      </plugin>
+
+      <!-- Make jars! -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.1.0</version>
+        <configuration>
+          <archive>
+            <manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
+          </archive>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 
 </project>
