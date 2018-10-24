@@ -43,6 +43,8 @@
         <extensions>true</extensions>
         <configuration>
           <sourceManifestFile>${project.basedir}/src/nbm/MANIFEST.mf</sourceManifestFile>
+          <netbeansInstallation>C:/Program Files/NetBeans 8.2</netbeansInstallation>
+          <additionalArguments>-J"-agentlib:jdwp=transport=dt_socket,server=n,address=localhost:8000,suspend=y"</additionalArguments>
         </configuration>
       </plugin>
 

@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="CompileAndRunNetBeans" type="Multirun" factoryName="Multirun" singleton="true" separateTabs="false" startOneByOne="false" markFailedProcess="true" hideSuccessProcess="false" delayTime="1">
+    <runConfiguration name="INTERNAL_RunIDE" type="Maven" />
+    <runConfiguration name="INTERNAL_AttachToNB" type="Remote" />
+    <method v="2" />
+  </configuration>
+</component>
